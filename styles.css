@@ -10,7 +10,6 @@ body {
   line-height: 1.6;
   background: radial-gradient(ellipse at bottom, #d0d2d4 0%, #090A0F 100%);
   color: #fff;
-  overflow: hidden;
 }
 body::before {
   content: "";
@@ -50,14 +49,20 @@ nav a {
   font-weight: bold;
 }
 
-section:not(.portada){
-  min-height: 100vh;
+.snap-container {
   height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+section{
+  min-height: 100vh;
+  height: 100vh;  
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
   box-sizing: border-box;
   padding: 2rem;
 }
@@ -86,10 +91,10 @@ footer {
 }
 
 .portada {
+  scroll-snap-align: start;
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   padding: 0;
 }

@@ -1,3 +1,33 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.snap-container');
+  const sections = Array.from(container.querySelectorAll('section'));
+  let isScrolling = false;
+
+  container.addEventListener('wheel', (e) => {
+    if (isScrolling) return;
+    e.preventDefault();
+
+    const current = Math.round(container.scrollTop / window.innerHeight);
+    let target = current;
+
+    if (e.deltaY > 0 && current < sections.length - 1) {
+      target = current + 1;
+    } else if (e.deltaY < 0 && current > 0) {
+      target = current - 1;
+    }
+
+    if (target !== current) {
+      isScrolling = true;
+      container.scrollTo({
+        top: target * window.innerHeight,
+        behavior: 'smooth'
+      });
+      setTimeout(() => { isScrolling = false; }, 700); // Ajusta el tiempo si es necesario
+    }
+  }, { passive: false });
+});
+
+
 function generateStarShadows(count) {
   const shadows = [];
   for (let i = 0; i < count; i++) {
