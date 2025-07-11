@@ -25,7 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { isScrolling = false; }, 700); // Ajusta el tiempo si es necesario
     }
   }, { passive: false });
+
+  const navToggle = document.querySelector('.nav-toggle');
+  const navUl = document.querySelector('nav ul');
+  navToggle.addEventListener('click', () => {
+    navUl.classList.toggle('open');
+  });
+
+  navUl.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        navUl.classList.remove('open');
+      }
+    });
+  });
 });
+
 
 
 function generateStarShadows(count) {
