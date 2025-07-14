@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  const sections2 = Array.from(document.querySelectorAll('section'));
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  function onScroll() {
+    let currentSection = sections2[0];
+    const scrollPos = container.scrollTop;
+    console.log(`Scroll position: ${scrollPos}`);
+
+    sections2.forEach(section => {
+      const sectionTop = section.offsetTop - 250; // Ajusta el offset según tu nav
+      console.log(`Section: ${section.id}, Top: ${sectionTop}`);
+      if (scrollPos >= sectionTop) {
+        currentSection = section;
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').replace('#', '') === currentSection.id) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  container.addEventListener('scroll', onScroll);
+  onScroll();
+
 });
 
 
