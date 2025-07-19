@@ -22,7 +22,7 @@ nav {
   position: fixed;
   left: 0;
   z-index: 3;
-  height: 10%;
+  height: 6%;
   width: 100%;
   background-color: rgba(5, 21, 37, 0.5);
   padding: 1rem 0;
@@ -72,7 +72,7 @@ nav {
 
 nav ul {
   list-style: none;
-  font-size: 2vw;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   padding: 0;
   display: flex;
   justify-content: center;
@@ -87,7 +87,7 @@ nav a {
 }
 
 nav a.active {
-  color: #e9d980; /* O el color que prefieras */
+  color: #ffde59; /* O el color que prefieras */
 }
 
 .snap-container {
@@ -95,7 +95,7 @@ nav a.active {
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 180px;
+  scroll-padding-top: 10%;
   scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;   /* Internet Explorer 10+ */
 }
@@ -115,21 +115,6 @@ section{
   padding: 2rem 2rem 2rem 2rem;;
 }
 
-input, button {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-button {
-  background-color: #003366;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #005599;
-}
 
 footer {
   background-color: #333;
@@ -224,15 +209,31 @@ footer {
   width: 60%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info-congreso > div {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-congreso img {
+  width: 250px;      /* Cambia este valor según lo que necesites */
+  max-width: 100%;   /* Para que no se desborde en pantallas pequeñas */
+  height: auto;      /* Mantiene la proporción */
+  border-radius: 1rem; /* Opcional: bordes redondeados */
+  margin: 1rem auto;    /* Opcional: centra y agrega espacio */
 }
 
 table {
-  width: 100%;
+  background-color: #3b2c2199;
+  width: 50%;
   border-collapse: collapse;
   font-family: sans-serif;
   text-align: center;
+  margin: 2rem auto;
 }
 
 th, td {
@@ -249,4 +250,38 @@ caption {
   caption-side: top;
   font-size: 1.2em;
   margin-bottom: 10px;
+}
+
+.snap-container a {
+  text-decoration: none;
+}
+/* CSS */
+.button-32 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.button-32:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
 }
