@@ -1,0 +1,21 @@
+.info-congreso {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info-congreso > div {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-congreso img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 1rem auto;
+}

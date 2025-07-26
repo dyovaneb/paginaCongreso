@@ -1,0 +1,48 @@
+.portada {
+  scroll-snap-align: start;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  margin-top: 140px;
+}
+
+.portada img {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
+.portada-texto {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: right;
+  width: 60vw;
+  max-width: 700px;
+  line-height: 1.4;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.portada-texto h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.portada-texto p {
+  position: absolute;
+  right: 5%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  max-width: 400px;
+}
+

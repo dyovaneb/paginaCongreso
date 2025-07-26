@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Congreso de Educación Matemática</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stars.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="snap-container.css" />
+    <link rel="stylesheet" href="portada.css" />
+    <link rel="stylesheet" href="info-congreso.css" />
+    <link rel="stylesheet" href="expositores.css" />
+    <link rel="stylesheet" href="tabs.css" />
+    <link rel="stylesheet" href="buttons.css" />
   </head>
   <body>
     <div id="stars"></div>
@@ -16,6 +24,7 @@
       <ul>
         <li><a href="#portada">Inicio</a></li>
         <li><a href="#info">VI Congreso</a></li>
+        <li><a href="#expositores">Expositores</a></li>
         <li><a href="#Ciculares">Ciculares</a></li>
         <li><a href="#inscripcion">Inscripción</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -35,7 +44,6 @@
             justos
           </p>
         </div>
-        
       </section>
 
       <section id="info">
@@ -50,13 +58,17 @@
             Universidad de Tarapacá, <br />Arica, Región de Arica y Parinacota,
             Chile.
             <div>
-            <img id="fotoUniversidad" src="images/Universidad.jpg" alt="Universidad de Tarapacá">
+              <img
+                id="fotoUniversidad"
+                src="images/Universidad.jpg"
+                alt="Universidad de Tarapacá"
+              />
+            </div>
           </div>
-          </div>
-          
+
           <div>
-            <b>Bajo el lema de Pluralidad: </b> Corazón de la educación
-            científica para futuros más justos, el objetivo general del sexto
+            <b>Bajo el lema de Pluralidad: </b>
+            <!--el objetivo general del sexto
             Congreso de la Sociedad Chilena de Educación Científica es: Celebrar
             y visibilizar la diversidad de voces, saberes y prácticas en la
             educación científica, integrando experiencias de enseñanza,
@@ -70,9 +82,28 @@
             única y valiosa al florecimiento de la educación científica y sus
             didácticas. A través de nuestro congreso, buscamos imaginar y
             construir colectivamente futuros más equitativos y sostenibles desde
-            la educación en ciencias.
-         </div>
-         
+            la educación en ciencias. -->
+            Corazón de la educación científica para futuros más justos,
+          </div>
+        </div>
+      </section>
+
+      <section id="expositores">
+        <div class="expositores-superior">
+          <div class="foto">
+            <img src="images/conferencista.png" alt="Dra Valeria Cabello" />
+          </div>
+          <div class="contenido-titulo">
+            <div class="expositor">Dra Valeria Cabello Gonzalez</div>
+            <div class="infoExpositor">
+              Profesora asociada facultad de educación, pontificia universidad
+              católica de chile
+            </div>
+          </div>
+        </div>
+        <div class="titulo">
+          Aprender Ciencias y ciudadanía con enfoque territorial
+        </div>
       </section>
 
       <section id="Ciculares">
@@ -82,114 +113,123 @@
 
       <section id="inscripcion">
         <h2>Inscripción</h2>
-        <a class="button-32" href="https://docs.google.com/forms/d/e/1FAIpQLSd-UEmTn_itnYxidDxPl8Y2DA8c-o1yfuj_NQmnYR6uiIcPZA/viewform"
+        <a
+          class="button-32"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd-UEmTn_itnYxidDxPl8Y2DA8c-o1yfuj_NQmnYR6uiIcPZA/viewform"
           target="_blank"
-          rel="noopener noreferrer">Formulario de inscripcion</a>
-  <div class="contenedorTabpaPestanas">
-  <div class="tabs">
-    <div class="tab-button active" data-tab="no-expositores">No expositores</div>
-    <div class="tab-button" data-tab="expositores">Expositores</div>
-  </div>
+          rel="noopener noreferrer"
+          >Formulario de inscripcion</a
+        >
+        <div class="contenedorTabpaPestanas">
+          <div class="tabs">
+            <div class="tab-button active" data-tab="no-expositores">
+              No expositores
+            </div>
+            <div class="tab-button" data-tab="expositores">Expositores</div>
+          </div>
 
-  <!-- TAB 1: No expositores -->
-  <div class="tab-content active" id="no-expositores">
-    
-    <table>
-      <thead>
-        <tr>
-          <th rowspan="2"> Costos de inscripción<br>(Valores en pesos chilenos)</th>
-          <th colspan="2">Hasta el 05 de octubre</th>
-          <th colspan="2">Desde el 06 de octubre</th>
-        </tr>
-        <tr>
-          <th>No socio</th>
-          <th>Socio</th>
-          <th>No socio</th>
-          <th>Socio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Académicos e investigadores</td>
-          <td>$70.000</td>
-          <td>$50.000</td>
-          <td>$90.000</td>
-          <td>$70.000</td>
-        </tr>
-        <tr>
-          <td>Estudiantes de postgrado</td>
-          <td>$50.000</td>
-          <td>$30.000</td>
-          <td>$60.000</td>
-          <td>$40.000</td>
-        </tr>
-        <tr>
-          <td>Profesores y educadores del sistema escolar</td>
-          <td>$20.000</td>
-          <td>$10.000</td>
-          <td>$25.000</td>
-          <td>$15.000</td>
-        </tr>
-        <tr>
-          <td>Estudiante de pregrado</td>
-          <td>$15.000</td>
-          <td>$5.000</td>
-          <td>$20.000</td>
-          <td>$10.000</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+          <!-- TAB 1: No expositores -->
+          <div class="tab-content active" id="no-expositores">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">
+                    Costos de inscripción<br />(Valores en pesos chilenos)
+                  </th>
+                  <th colspan="2">Hasta el 05 de octubre</th>
+                  <th colspan="2">Desde el 06 de octubre</th>
+                </tr>
+                <tr>
+                  <th>No socio</th>
+                  <th>Socio</th>
+                  <th>No socio</th>
+                  <th>Socio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Académicos e investigadores</td>
+                  <td>$70.000</td>
+                  <td>$50.000</td>
+                  <td>$90.000</td>
+                  <td>$70.000</td>
+                </tr>
+                <tr>
+                  <td>Estudiantes de postgrado</td>
+                  <td>$50.000</td>
+                  <td>$30.000</td>
+                  <td>$60.000</td>
+                  <td>$40.000</td>
+                </tr>
+                <tr>
+                  <td>Profesores y educadores del sistema escolar</td>
+                  <td>$20.000</td>
+                  <td>$10.000</td>
+                  <td>$25.000</td>
+                  <td>$15.000</td>
+                </tr>
+                <tr>
+                  <td>Estudiante de pregrado</td>
+                  <td>$15.000</td>
+                  <td>$5.000</td>
+                  <td>$20.000</td>
+                  <td>$10.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-  <!-- TAB 2: Expositores -->
-  <div class="tab-content" id="expositores">
-    <table>
-      <thead>
-        <tr>
-          <th rowspan="2"> Costos de inscripción<br>(Valores en pesos chilenos)</th>
-          <th colspan="2">Hasta el 05 de octubre</th>
-          <th colspan="2">Desde el 06 de octubre</th>
-        </tr>
-        <tr>
-          <th>No socio</th>
-          <th>Socio</th>
-          <th>No socio</th>
-          <th>Socio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Académicos e investigadores</td>
-          <td>$90.000</td>
-          <td>$60.000</td>
-          <td>$120.000</td>
-          <td>$90.000</td>
-        </tr>
-        <tr>
-          <td>Estudiantes de postgrado</td>
-          <td>$60.000</td>
-          <td>$40.000</td>
-          <td>$80.000</td>
-          <td>$60.000</td>
-        </tr>
-        <tr>
-          <td>Profesores y educadores del sistema escolar</td>
-          <td>$30.000</td>
-          <td>$15.000</td>
-          <td>$40.000</td>
-          <td>$25.000</td>
-        </tr>
-        <tr>
-          <td>Estudiante de pregrado</td>
-          <td>$20.000</td>
-          <td>$5.000</td>
-          <td>$25.000</td>
-          <td>$10.000</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  </div>
+          <!-- TAB 2: Expositores -->
+          <div class="tab-content" id="expositores">
+            <table>
+              <thead>
+                <tr>
+                  <th rowspan="2">
+                    Costos de inscripción<br />(Valores en pesos chilenos)
+                  </th>
+                  <th colspan="2">Hasta el 05 de octubre</th>
+                  <th colspan="2">Desde el 06 de octubre</th>
+                </tr>
+                <tr>
+                  <th>No socio</th>
+                  <th>Socio</th>
+                  <th>No socio</th>
+                  <th>Socio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Académicos e investigadores</td>
+                  <td>$90.000</td>
+                  <td>$60.000</td>
+                  <td>$120.000</td>
+                  <td>$90.000</td>
+                </tr>
+                <tr>
+                  <td>Estudiantes de postgrado</td>
+                  <td>$60.000</td>
+                  <td>$40.000</td>
+                  <td>$80.000</td>
+                  <td>$60.000</td>
+                </tr>
+                <tr>
+                  <td>Profesores y educadores del sistema escolar</td>
+                  <td>$30.000</td>
+                  <td>$15.000</td>
+                  <td>$40.000</td>
+                  <td>$25.000</td>
+                </tr>
+                <tr>
+                  <td>Estudiante de pregrado</td>
+                  <td>$20.000</td>
+                  <td>$5.000</td>
+                  <td>$25.000</td>
+                  <td>$10.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <section id="contacto">

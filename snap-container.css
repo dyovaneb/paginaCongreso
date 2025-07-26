@@ -1,0 +1,30 @@
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 10%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .snap-container {
+    scroll-padding-top: 5vh;
+  }
+}
