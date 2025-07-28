@@ -67,7 +67,7 @@ section#expositores {
   gap: 2rem; /* Espacio entre expositores */
   padding-bottom: 1rem;
   /* Opcional: oculta la barra de scroll visualmente */
-  scrollbar-width: none; /* Firefox */
+  overscroll-behavior-x: contain;
 }
 .slideShow::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */

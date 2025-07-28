@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function onScroll() {
     let currentSection = sections2[0];
     const scrollPos = container.scrollTop;
-    console.log(`Scroll position: ${scrollPos}`);
 
     sections2.forEach(section => {
       const sectionTop = section.offsetTop - 250; // Ajusta el offset según tu nav
