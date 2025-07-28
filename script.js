@@ -129,19 +129,18 @@ function applyStars() {
   stars3.appendChild(afterBig);
 }
 
-const buttons = document.querySelectorAll('.tab-button');
-    const tabs = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-button');
+  const tabs = document.querySelectorAll('.tab-content');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Quitar clase activa de todo
+      buttons.forEach(b => b.classList.remove('active'));
+      tabs.forEach(t => t.classList.remove('active'));
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Quitar clase activa de todo
-        buttons.forEach(b => b.classList.remove('active'));
-        tabs.forEach(t => t.classList.remove('active'));
-
-        // Agregar clase activa al seleccionado
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
-      });
+      // Agregar clase activa al seleccionado
+      button.classList.add('active');
+      document.getElementById(button.dataset.tab).classList.add('active');
     });
+});
 
 window.onload = applyStars;

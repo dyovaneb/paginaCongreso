@@ -25,6 +25,6 @@ section {
 
 @media (max-width: 768px) {
   .snap-container {
-    scroll-padding-top: 5vh;
+    scroll-padding-top: 2vh;
   }
 }

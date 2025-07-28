@@ -19,3 +19,13 @@
   border-radius: 1rem;
   margin: 1rem auto;
 }
+
+@media (max-width: 768px) {
+  .info-congreso > div {
+  padding: 0rem;
+  text-align: center;
+}
+.info-congreso > div > h2{
+  margin-bottom: 0px;
+}
+}
