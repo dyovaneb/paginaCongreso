@@ -1,4 +1,5 @@
 section#expositores {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -68,6 +69,8 @@ section#expositores {
   padding-bottom: 1rem;
   /* Opcional: oculta la barra de scroll visualmente */
   overscroll-behavior-x: contain;
+   scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;
 }
 .slideShow::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
@@ -77,11 +80,39 @@ section#expositores {
   flex: 0 0 60vw; /* Cada expositor ocupa el 80% del ancho de la ventana */
   min-width: 300px;
   scroll-snap-align: start;
-  background: rgba(0,0,0,0.2);
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-right: 10vw;
+  margin-top: 5vw;
 }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  background-color: #FFD70050;
+}
+.next {
+  right: 4vw;
+}
+
+.prev {
+  left: 4vw;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 @media (max-width: 768px) {
     .expositores-superior {
@@ -126,6 +157,11 @@ section#expositores {
     width: 100vw;
     max-width: 100vw;    
     overflow-x: auto;
-    padding-left: 50vw; /* 400px es la mitad de max-width de .expositorcarrusel */
+    padding-left: 50vw; /* 400px es la mitad de max-width de .expositorcarrusel */ 
+  }
+  .spacer-final {
+    flex: 0 0 60vw; /* 60vw es el ancho de .expositorcarrusel */
+    min-width: 0;
+    height: 1px;
   }
 }
