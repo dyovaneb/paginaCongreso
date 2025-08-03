@@ -10,10 +10,15 @@
 .info-congreso > div {
   padding: 2rem;
   text-align: center;
+  font-size: clamp(1rem, 1.3vw, 2rem);;
+}
+
+.info-congreso h2 {
+  font-size: clamp(1.5rem, 2vw, 4rem);
 }
 
 .info-congreso img {
-  width: 250px;
+  width: 25vw;
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
