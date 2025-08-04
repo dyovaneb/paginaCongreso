@@ -27,3 +27,16 @@
     font-size: clamp(1rem, 2vw, 2rem);
     margin: 10px;
 }
+
+@media (max-width: 768px) {
+  .buttonCircular {
+    width: 80vw;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin: 5vh auto;
+  }
+  
+  .circular {
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin: 5px;
+  }
+}

@@ -46,3 +46,8 @@
   max-width: 400px;
 }
 
+@media (max-width: 768px){
+  .portada-texto{
+    top:30%;
+  }
+}
