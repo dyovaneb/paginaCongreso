@@ -6,6 +6,26 @@ section#expositores {
   padding: 40px 20px;
 }
 
+.expositores-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding-top: 50px;   /* Ajusta este valor según lo que necesites */
+}
+
+.fotoExpositormini{
+  width: 6vw;
+  max-width: 90px;
+  height: auto;
+  cursor: pointer;
+}
+
+.fotoExpositormini:hover {
+  transform: scale(1.09);
+  transition: transform 0.3s ease;
+}
 .expositores-superior {
     display: flex;
     flex-direction: row;
@@ -143,7 +163,18 @@ section#expositores {
     flex: 0 0 85vw;
     min-width: 220px;
     }
+    .expositores-header {
+    display: none;
+    }
+    .prev, .next {
+  top: 18%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-size: 10px;
 }
+}
+
 
 @media (min-width: 769px) {
     section#expositores {

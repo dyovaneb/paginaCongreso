@@ -25,9 +25,26 @@ function scrollToExpositor(direction) {
   slideShow.scrollBy({ left: expositorWidth * direction, behavior: 'smooth' });
 }
 
+function scrollToExpositorByIndex(index) {
+  const slideShow = document.querySelector('.slideShow');
+  const expositores = Array.from(slideShow.querySelectorAll('.expositorcarrusel'));
+
+  // Calcula la posición del expositor a desplazar
+  const expositorWidth = expositores[0].offsetWidth;
+  const scrollPosition = expositorWidth * index;
+  console.log(`Scrolling to expositor index ${index}, position: ${scrollPosition}`);
+  slideShow.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
   if (prevBtn) prevBtn.addEventListener('click', () => scrollToExpositor(-1));
   if (nextBtn) nextBtn.addEventListener('click', () => scrollToExpositor(1));
+
+  const headerItems = document.querySelectorAll('.expositores-header .fotoExpositormini');
+  headerItems.forEach((item, idx) => {
+    item.addEventListener('click', () => scrollToExpositorByIndex(idx + 1));
+  });
 });
+

@@ -23,7 +23,7 @@ nav {
 
 nav ul {
   list-style: none;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1rem, 1.2vw, 1.6rem);
   padding: 0;
   display: flex;
   justify-content: center;

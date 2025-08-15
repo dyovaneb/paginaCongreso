@@ -7,7 +7,7 @@
   margin-top: 140px;
 }
 
-.portada img {
+.imagenFondo {
   position: fixed;
   top: 0;
   left: 50%;
@@ -19,10 +19,36 @@
   filter: brightness(0.8);
 }
 
+.logo-schec{
+  width: 5vw;
+}
+
+.logos {
+  position: absolute;
+  top: 5%;
+  left: 17%;
+  display: flex;
+  gap: 30px;
+}
+
+.logoImagenTarapaca{
+  width: 8vw;
+  max-width: 150px;
+  height: auto;  
+  object-fit: contain;
+}
+.logoImagen {
+  width: 12vw;
+  max-width: 280px; 
+  height: auto;
+  object-fit: contain; 
+}
+
+
 .portada-texto {
   position: absolute;
   top: 25%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: right;
@@ -47,7 +73,19 @@
 }
 
 @media (max-width: 768px){
+  .portada{
+    margin-top: 0;
+  }
   .portada-texto{
-    top:30%;
+    top:40%;
+  }
+  .logos{
+    top: 3%;
+  }
+  .logoImagen {
+    width: 100px;
+  }
+  .logoImagenTarapaca {
+    width: 50px;
   }
 }

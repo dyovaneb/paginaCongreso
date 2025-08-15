@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Congreso de Educación Matemática</title>
+    <title>Congreso de Educación Científica</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="stars.css" />
     <link rel="stylesheet" href="nav.css" />
@@ -23,22 +23,47 @@
     <nav>
       <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
       <ul>
+        <li class="logo">
+          <img
+            src="images/schec-blanco.png"
+            alt="Logo Schec"
+            class="logo-schec"
+          />
+        </li>
+
         <li><a href="#portada">Inicio</a></li>
         <li><a href="#info">VI Congreso</a></li>
         <li><a href="#expositores">Expositores</a></li>
         <li><a href="#Ciculares">Circulares</a></li>
         <li><a href="#inscripcion">Inscripción</a></li>
+        <li><a href="#sobre">Sobre Arica</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
     <main class="snap-container">
       <section class="portada" id="portada">
-        <img src="images/TestigosDelUniverso.jpg" alt="Portada Congreso" />
+        <img
+          class="imagenFondo"
+          src="images/TestigosDelUniverso.jpg"
+          alt="Portada Congreso"
+        />
+        <div class="logos">
+          <img
+            class="logoImagen"
+            src="images/schec-blanco.png"
+            alt="Logo Schec"
+          />
+          <img
+            class="logoImagenTarapaca"
+            src="images/tarapacaBlanco.png"
+            alt="Logo Tarapacá"
+          />
+        </div>
         <div class="portada-texto">
           <h1>
             VI Congreso <br />
-            Sociedad Chilena de Educación Matemática
+            Sociedad Chilena de Educación Científica
           </h1>
           <p style="color: #ffde59">
             Pluralidad: Corazón de la educación científica para futuros más
@@ -48,7 +73,7 @@
       </section>
 
       <section id="info">
-        <h1>VI congreso de la Sociedad Chilena de Educación Científica</h1>
+        <h2>VI congreso de la Sociedad Chilena de Educación Científica</h2>
         <div class="info-congreso">
           <div>
             <h2 style="border-bottom: #ffde59 2px solid">Fecha</h2>
@@ -68,8 +93,8 @@
                 alt="Universidad de Tarapacá"
               />
             </div>
-            <b>Bajo el lema de Pluralidad: </b>
-            <!--el objetivo general del sexto
+            <!--<b>Bajo el lema de Pluralidad: </b>
+            el objetivo general del sexto
             Congreso de la Sociedad Chilena de Educación Científica es: Celebrar
             y visibilizar la diversidad de voces, saberes y prácticas en la
             educación científica, integrando experiencias de enseñanza,
@@ -83,33 +108,41 @@
             única y valiosa al florecimiento de la educación científica y sus
             didácticas. A través de nuestro congreso, buscamos imaginar y
             construir colectivamente futuros más equitativos y sostenibles desde
-            la educación en ciencias. -->
-            Corazón de la educación científica para futuros más justos.
+            la educación en ciencias.
+            Corazón de la educación científica para futuros más justos. -->
           </div>
         </div>
       </section>
 
       <section id="expositores">
+        <div class="expositores-header">
+          <img
+            class="fotoExpositormini"
+            src="images/drLilianaValladares.png"
+            alt="Dra Liliana Valladares"
+          />
+          <img
+            class="fotoExpositormini"
+            src="images/drPedroMembiela.png"
+            alt="Dra Liliana Valladares"
+          />
+          <img
+            class="fotoExpositormini"
+            src="images/conferencista.png"
+            alt="Dra Liliana Valladares"
+          />
+          <img
+            class="fotoExpositormini"
+            src="images/drHernandCofre.png"
+            alt="Dra Liliana Valladares"
+          />
+          <img
+            class="fotoExpositormini"
+            src="images/drGonzaloGuerrero.png"
+            alt="Dra Liliana Valladares"
+          />
+        </div>
         <div class="slideShow">
-          <div class="expositorcarrusel">
-            <div class="expositores-superior">
-              <div class="foto">
-                <img src="images/conferencista.png" alt="Dra Valeria Cabello" />
-              </div>
-              <div class="contenido-titulo">
-                <div class="expositornombre">Dra Valeria Cabello Gonzalez</div>
-                <div class="infoExpositor">
-                  Profesora asociada facultad de educación, pontificia
-                  universidad católica de chile
-                </div>
-              </div>
-            </div>
-
-            <div class="titulo">
-              Aprender Ciencias y ciudadanía con enfoque territorial
-            </div>
-          </div>
-
           <div class="expositorcarrusel">
             <div class="expositores-superior">
               <div class="foto">
@@ -120,7 +153,7 @@
               </div>
               <div class="contenido-titulo">
                 <div class="expositornombre">
-                  Dra Liliana Valladares Riveroll
+                  Dra. Liliana Valladares Riveroll
                 </div>
                 <div class="infoExpositor">
                   Profesora Universidad Nacional Autónoma de México
@@ -128,27 +161,7 @@
               </div>
             </div>
 
-            <div class="titulo">Educar en ciencias con el corazón abierto</div>
-          </div>
-
-          <div class="expositorcarrusel">
-            <div class="expositores-superior">
-              <div class="foto">
-                <img src="images/drHernandCofre.png" alt="Dra Hernán Cofré" />
-              </div>
-              <div class="contenido-titulo">
-                <div class="expositornombre">Dra Hernán Cofré Mardones</div>
-                <div class="infoExpositor">
-                  Profesor adjunto, instituo de biología Pontificia Universidad
-                  Católica de Valparaíso.
-                </div>
-              </div>
-            </div>
-
-            <div class="titulo">
-              ¿Los datos me hablan o mis ideas los inventan? Estudio de los
-              Múltiples PCK que se ponen en juego al enseñar cambio climático
-            </div>
+            <div class="titulo">Educar en ciencias con el corazón abierto.</div>
           </div>
 
           <div class="expositorcarrusel">
@@ -157,7 +170,7 @@
                 <img src="images/drPedroMembiela.png" alt="Dr Pedro Membiela" />
               </div>
               <div class="contenido-titulo">
-                <div class="expositornombre">Dr Pedro Membiela Iglesia</div>
+                <div class="expositornombre">Dr. Pedro Membiela Iglesia</div>
                 <div class="infoExpositor">
                   Profesor Jubilado, Universidad de Vigo
                 </div>
@@ -165,7 +178,46 @@
             </div>
 
             <div class="titulo">
-              Las emociones en los profesores de ciencias
+              Las emociones en los profesores de ciencias.
+            </div>
+          </div>
+
+          <div class="expositorcarrusel">
+            <div class="expositores-superior">
+              <div class="foto">
+                <img src="images/conferencista.png" alt="Dra Valeria Cabello" />
+              </div>
+              <div class="contenido-titulo">
+                <div class="expositornombre">Dra. Valeria Cabello Gonzalez</div>
+                <div class="infoExpositor">
+                  Profesora asociada Facultad de Educación, Pontificia
+                  Universidad Católica de Chile
+                </div>
+              </div>
+            </div>
+
+            <div class="titulo">
+              Aprender Ciencias y ciudadanía con enfoque territorial.
+            </div>
+          </div>
+
+          <div class="expositorcarrusel">
+            <div class="expositores-superior">
+              <div class="foto">
+                <img src="images/drHernandCofre.png" alt="Dra Hernán Cofré" />
+              </div>
+              <div class="contenido-titulo">
+                <div class="expositornombre">Dra. Hernán Cofré Mardones</div>
+                <div class="infoExpositor">
+                  Profesor adjunto, Instituo de Biología Pontificia Universidad
+                  Católica de Valparaíso.
+                </div>
+              </div>
+            </div>
+
+            <div class="titulo">
+              ¿Los datos me hablan o mis ideas los inventan? Estudio de los
+              Múltiples PCK que se ponen en juego al enseñar cambio climático.
             </div>
           </div>
 
@@ -178,9 +230,9 @@
                 />
               </div>
               <div class="contenido-titulo">
-                <div class="expositornombre">Dr Gonzalo Guerrero</div>
+                <div class="expositornombre">Dr. Gonzalo Guerrero</div>
                 <div class="infoExpositor">
-                  Académico de la facultad de educación y del instituo de
+                  Académico de la Facultad de Educación y del Instituo de
                   desarrollo sustentable, Pontificia Universidad Católica de
                   Chile
                 </div>
@@ -188,7 +240,7 @@
             </div>
 
             <div class="titulo">
-              Las emociones en los profesores de ciencias
+              Las emociones en los profesores de ciencias.
             </div>
           </div>
           <div class="spacer-final"></div>
@@ -354,6 +406,12 @@
             </table>
           </div>
         </div>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre Arica</h2>
+        <p>asdf</p>
+        <p>qewr</p>
       </section>
 
       <section id="contacto">
