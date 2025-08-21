@@ -1,0 +1,22 @@
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Espacio entre los logos */
+  margin-top: 20px;
+}
+
+.redes img {
+  width: 48px;      /* Tamaño fijo para todos los logos */
+  height: 48px;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.contactoTexto {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 2.2rem);
+}
+.redes img:hover {
+  transform: scale(1.1); /* Efecto al pasar el mouse */
+}
