@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections2.forEach(section => {
       const sectionTop = section.offsetTop - 250; // Ajusta el offset según tu nav
-      console.log(`Section: ${section.id}, Top: ${sectionTop}`);
       if (scrollPos >= sectionTop) {
         currentSection = section;
       }
@@ -72,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function generateStarShadows(count) {
   const shadows = [];
   for (let i = 0; i < count; i++) {
-    const x = Math.floor(Math.random() * 2000);
+    const x = Math.floor(Math.random() * 4000);
     const y = Math.floor(Math.random() * 2000);
     shadows.push(`${x}px ${y}px #FFF`);
   }
