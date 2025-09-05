@@ -28,7 +28,7 @@
     margin: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .buttonCircular {
     width: 80vw;
     font-size: clamp(1rem, 3vw, 2rem);

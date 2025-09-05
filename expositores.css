@@ -134,7 +134,7 @@ section#expositores {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .expositores-superior {
     flex-direction: column;
     align-items: center;
@@ -176,7 +176,7 @@ section#expositores {
 }
 
 
-@media (min-width: 769px) {
+@media (min-width: 900px) {
     section#expositores {
     display: block; 
     margin: 0;
