@@ -1,0 +1,64 @@
+/* Programa */
+
+
+.wrap {   
+    overflow-y: auto;
+    position: relative;
+    width: 70%;
+    height: 80vh;
+    cursor: grab;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;
+}
+.wrap.dragging {
+  cursor: grabbing;
+}
+.wrap::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari, Opera */
+}
+
+table.programaTabla thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #0066cc;
+  border-top: 1px solid #ddd;    /* Borde superior */
+  border-bottom: 3px solid #bbb;
+}
+
+table.programaTabla { 
+    border-collapse: separate;
+    border-spacing: 0;
+    border-left: 1px solid #ddd;
+    border-right: none;
+    width: 100%; 
+    font-size: clamp(0.7rem, 2.1vw, 1.5rem);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+table.programaTabla th,
+table.programaTabla td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+table.programaTabla th {
+    text-align: left;
+}
+
+table.programaTabla th:first-child,
+table.programaTabla td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  border-left: none;
+}
+
+.time {
+    width: 120px;
+    font-weight: 600;
+    background-color: #0066cc;
+}
