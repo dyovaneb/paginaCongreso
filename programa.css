@@ -17,6 +17,10 @@
     display: none;              /* Chrome, Safari, Opera */
 }
 
+.comentario{
+  font-size: clamp(0.467rem, 1.4vw, 1rem);
+}
+
 table.programaTabla thead th {
   position: sticky;
   top: 0;
@@ -31,7 +35,7 @@ table.programaTabla {
     border-spacing: 0;
     border-left: 1px solid #ddd;
     border-right: none;
-    width: 100%; 
+    width: 100%;
     font-size: clamp(0.7rem, 2.1vw, 1.5rem);
     user-select: none;
     -webkit-user-select: none;
@@ -46,7 +50,7 @@ table.programaTabla td {
 }
 
 table.programaTabla th {
-    text-align: left;
+    text-align: center;
 }
 
 table.programaTabla th:first-child,

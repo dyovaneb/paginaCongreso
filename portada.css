@@ -60,7 +60,7 @@
 }
 
 .portada-texto h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 8.3vw, 3rem);;
   margin: 0;
 }
 
@@ -72,12 +72,22 @@
   max-width: 400px;
 }
 
+.videoYoutube {
+  position: absolute;
+  top: 135%;
+  left: 30%;
+  width: 25vw;
+  height: 17.7vw;
+  min-width: 200px;
+  min-height: 150px;
+}
+
 @media (max-width: 900px){
   .portada{
     margin-top: 0;
   }
   .portada-texto{
-    top:40%;
+    top:30%;
   }
   .logos{
     top: 3%;
@@ -87,5 +97,10 @@
   }
   .logoImagenTarapaca {
     width: 50px;
+  }
+}
+@media (max-width: 667px){
+  .videoYoutube {
+    top: 140%
   }
 }

@@ -20,11 +20,14 @@ section {
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  padding: 2rem 2rem 2rem 2rem;
+  padding-top: 2rem;
 }
 
 @media (max-width: 900px) {
   .snap-container {
     scroll-padding-top: 2vh;
+  }
+  section {
+    padding: 1rem;
   }
 }

@@ -18,7 +18,7 @@
 }
 
 .info-congreso h2 {
-  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-size: clamp(1.1rem, 2vw, 4rem);
 }
 
 .info-congreso img {
@@ -30,11 +30,19 @@
 }
 
 .video-congreso {
-  width: 25vw;
-  height: 17.7vw;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  min-height: 190px;
+  max-height: 350px;
   display: block;
-  margin: 1rem auto;
+  margin-top: 0 auto;
+}
+.video-congreso iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {
@@ -46,8 +54,8 @@
   margin-bottom: 0px;
 }
 .video-congreso {
-  width: 40vw;
-  height: 40vw;
+  width: 34vw;
+  height: 34vw;
   max-width: 500px;
   display: block;
 }
