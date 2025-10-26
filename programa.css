@@ -9,12 +9,21 @@
     cursor: grab;
     scrollbar-width: none;      /* Firefox */
     -ms-overflow-style: none;
+    white-space: nowrap;
 }
 .wrap.dragging {
   cursor: grabbing;
 }
 .wrap::-webkit-scrollbar {
     display: none;              /* Chrome, Safari, Opera */
+}
+
+.wrap::after {
+  content: "";
+  display: inline-block;
+  width: 42vw;   /* espacio deseado a la derecha */
+  height: 1px;
+  vertical-align: top;
 }
 
 .comentario{
@@ -31,12 +40,15 @@ table.programaTabla thead th {
 }
 
 table.programaTabla { 
+  display: inline-table;
+  vertical-align: top;
     border-collapse: separate;
     border-spacing: 0;
     border-left: 1px solid #ddd;
     border-right: none;
     width: 100%;
-    font-size: clamp(0.7rem, 2.1vw, 1.5rem);
+    table-layout: fixed;
+    font-size: clamp(0.7rem, 2vw, 1.5rem);
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -47,6 +59,7 @@ table.programaTabla th,
 table.programaTabla td {
     padding: 8px;
     vertical-align: top;
+     white-space: normal; 
 }
 
 table.programaTabla th {
@@ -66,3 +79,20 @@ table.programaTabla td:first-child {
     font-weight: 600;
     background-color: #0066cc;
 }
+
+@media (max-width: 900px){
+  .wrap {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .time {
+    width: 40px;
+  }
+  table.programaTabla { 
+    width: 140vw;
+  }
+
+  .wrap::after {
+    width: 27vw;   /* espacio deseado a la derecha */
+  }
+}           

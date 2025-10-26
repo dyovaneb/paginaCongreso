@@ -25,7 +25,50 @@ function scrollToHotel(direction) {
   slideShow.scrollBy({ left: hotelWidth * direction, behavior: 'smooth' });
 }
 
+function updateHotelNavButtons() {
+  const slideShow = document.querySelector('.sobre-slideShow');
+  if (!slideShow) return;
+  const items = Array.from(slideShow.querySelectorAll('.sobre-carrusel'));
+  const prevBtn = document.querySelector('.hotelprev');
+  const nextBtn = document.querySelector('.hotelnext');
+  if (!items.length || !prevBtn || !nextBtn) return;
+
+  const scrollLeft = slideShow.scrollLeft;
+  let closestIndex = 0;
+  let minDist = Infinity;
+
+  items.forEach((el, i) => {
+    const dist = Math.abs(el.offsetLeft - scrollLeft);
+    if (dist < minDist) {
+      minDist = dist;
+      closestIndex = i;
+    }
+  });
+
+  prevBtn.style.display = (closestIndex <= 0) ? 'none' : '';
+  nextBtn.style.display = (closestIndex >= items.length - 1) ? 'none' : '';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  updateHotelNavButtons();
+
+  const slideShow = document.querySelector('.sobre-slideShow');
+  if (!slideShow) return;
+
+  let rafId = null;
+  slideShow.addEventListener('scroll', () => {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      updateHotelNavButtons();
+      rafId = null;
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    centrarHotel();
+    updateHotelNavButtons();
+  });
+
   const prevHBtn = document.querySelector('.hotelprev');
   const nextHBtn = document.querySelector('.hotelnext');
   if (prevHBtn) prevHBtn.addEventListener('click', () => scrollToHotel(-1));

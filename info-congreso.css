@@ -30,19 +30,25 @@
 }
 
 .video-congreso {
+  position: relative;
   width: 100%;
-  height: 100%;
-  padding: 1rem;
-  min-height: 190px;
-  max-height: 350px;
+  max-width: 12vw;    /* ajustar según diseño */
+  margin: 0 auto;
+  aspect-ratio: 9 / 16; /* portrait */
+  background: #000;
+  overflow: hidden;
   display: block;
-  margin-top: 0 auto;
 }
-.video-congreso iframe {
+
+.video-congreso video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border: none;
-  object-fit: cover;
+  border: 0;
+  display: block;
+  object-fit: contain; /* evita recortar; usa 'cover' si quieres rellenar */
+  background: #000;
 }
 
 @media (max-width: 900px) {
@@ -54,11 +60,9 @@
   margin-bottom: 0px;
 }
 .video-congreso {
-  width: 34vw;
-  height: 34vw;
-  max-width: 500px;
-  display: block;
-}
+    max-width: 40vw;       /* ajusta para que quepa en pantalla */
+    aspect-ratio: 9 / 16;
+  }
 .info-congreso img {
   width: 20vw;
   max-width: 100%;

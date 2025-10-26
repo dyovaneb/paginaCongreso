@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="contacto.css" />
     <link rel="stylesheet" href="arica.css" />
     <link rel="stylesheet" href="programa.css" />
+    <link rel="stylesheet" href="talleres.css" />
   </head>
   <body>
     <div id="stars"></div>
@@ -37,6 +38,7 @@
         <li><a href="#portada">Inicio</a></li>
         <li><a href="#info">VI Congreso</a></li>
         <li><a href="#expositores">Expositores</a></li>
+        <li><a href="#talleres">Talleres</a></li>
         <li><a href="#Ciculares">Circulares</a></li>
         <li><a href="#inscripcion">Inscripción</a></li>
         <li><a href="#sobre">Sobre Arica</a></li>
@@ -88,12 +90,7 @@
       </section>
 
       <section id="info">
-        <h2>VI congreso de la Sociedad Chilena de Educación Científica</h2>
         <div class="info-congreso">
-          <div>
-            <h2 style="border-bottom: #ffde59 2px solid">Fecha</h2>
-            5, 6 y 7 de noviembre de 2025
-          </div>
           <div>
             <h2 style="border-bottom: #ffde59 2px solid">Lugar</h2>
             Universidad de Tarapacá, <br />
@@ -126,6 +123,10 @@
             Arica, Región de Arica y Parinacota, Chile.
           </div>
           <div>
+            <h2 style="border-bottom: #ffde59 2px solid">Fecha</h2>
+            5, 6 y 7 de noviembre de 2025
+          </div>
+          <div>
             <img
               id="fotoUniversidad"
               src="images/Universidad.jpg"
@@ -133,16 +134,17 @@
             />
           </div>
           <div>
-            <span class="video-congreso">
-              <iframe
-                src="https://drive.google.com/file/d/1rnBj864BJxp2U4lxeLAOGcLmDvFHgtis/preview"
-                width="100%"
-                height="100%"
-                allow="autoplay"
-                allowfullscreen
-                frameborder="0"
-              ></iframe>
-            </span>
+            <div class="video-congreso">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="images/video-poster.jpg"
+              >
+                <source src="Video/VideoPromocion.mp4" type="video/mp4" />
+                Tu navegador no soporta la etiqueta video.
+              </video>
+            </div>
           </div>
         </div>
       </section>
@@ -153,86 +155,92 @@
             <thead>
               <tr>
                 <th class="time"></th>
-                <th>
-                  Miércoles 05 <br />
-                  <span class="comentario">Sede Velásquez UTA</span>
-                </th>
-                <th>
-                  Jueves 06 <br />
-                  <span class="comentario">Sede Saucache UTA</span>
-                </th>
-                <th>
-                  Viernes 07 <br />
-                  <span class="comentario">Sede Saucache UTA</span>
-                </th>
+                <th>Miércoles 05</th>
+                <th>Jueves 06</th>
+                <th>Viernes 07</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="time">8:00 - 8:30</td>
                 <td rowspan="10"></td>
+                <!-- <td>Miércoles</td> -->
                 <td>Inicio e inscripciones</td>
                 <td>Inicio e inscripciones</td>
               </tr>
 
               <tr>
                 <td class="time">8:30 - 9:00</td>
-
-                <td rowspan="2">Conferencista internacional</td>
-                <td rowspan="2">Conferencista internacional</td>
+                <!-- <td>Miércoles</td> -->
+                <td rowspan="2">
+                  Conferencista internacional: <br />
+                  <span class="comentario">
+                    Educar en ciencias con el corazón abierto (Liliana
+                    Valladares)
+                  </span>
+                </td>
+                <td rowspan="2">
+                  Conferencista internacional: <br />
+                  <span class="comentario">
+                    Las emociones en los profesores de Ciencias (Pedro Membiela)
+                  </span>
+                </td>
               </tr>
 
               <tr>
                 <td class="time">9:00 - 9:30</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">9:30 - 10:00</td>
-
+                <!-- <td>Miércoles</td> -->
                 <td>Café y evento cultural</td>
                 <td>Café y evento cultural</td>
               </tr>
 
               <tr>
                 <td class="time">10:00 - 10:30</td>
-                <td rowspan="2">
-                  Sesiones individuales paralelas <br />
-                  <span class="comentario">(4 presentaciones por sala)</span>
-                </td>
-                <td rowspan="2">
-                  Sesiones individuales paralelas<br />
-                  <span class="comentario">(4 presentaciones por sala)</span>
-                </td>
+                <!-- <td>Miércoles</td> -->
+                <td rowspan="5">Ponencias</td>
+                <td rowspan="5">Ponencias</td>
               </tr>
 
               <tr>
                 <td class="time">10:30 - 11:00</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">11:00 - 11:30</td>
 
-                <td rowspan="3">
-                  Sesiones individuales paralelas <br />
-                  <span class="comentario">(6 presentaciones por sala)</span>
-                </td>
-                <td rowspan="3">
-                  Sesiones individuales paralelas <br />
-                  <span class="comentario">(6 presentaciones por sala)</span>
-                </td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">11:30 - 12:00</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">12:00 - 12:30</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">12:30 - 13:00</td>
 
+                <!-- <td>Miércoles</td> -->
                 <td rowspan="3">Almuerzo libre</td>
                 <td rowspan="3">Almuerzo libre</td>
               </tr>
@@ -240,31 +248,43 @@
               <tr>
                 <td class="time">13:00 - 13:30</td>
                 <td rowspan="2">Inicio e inscripciones</td>
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">13:30 - 14:00</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">14:00 - 14:30</td>
                 <td rowspan="2">Bienvenida Evento cultural</td>
-                <td rowspan="2">Simposios</td>
-                <td rowspan="4">Talleres paralelos</td>
+                <td rowspan="4">Ponencias</td>
+                <td rowspan="4">Talleres</td>
               </tr>
 
               <tr>
                 <td class="time">14:30 - 15:00</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">15:00 - 15:30</td>
-                <td rowspan="2">Conversatorio Central</td>
-                <td rowspan="2">Conferencista nacional</td>
+                <td rowspan="2">Conversatorio profes rurales</td>
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">15:30 - 16:00</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
@@ -276,52 +296,80 @@
 
               <tr>
                 <td class="time">16:30 - 17:00</td>
-                <td rowspan="2">Conferencista nacional</td>
-                <td rowspan="4">
-                  Sesiones individuales paralelas <br />
-                  <span class="comentario">(8 presentaciones por sala)</span>
+                <td rowspan="2">
+                  Conferencista nacional: <br />
+                  <span class="comentario">
+                    Del Glaciar a la sala de clases: construyendo justicia
+                    ecosocial a través de Alfabetización Cientifíca y Ambiental
+                    Crítica (Gonzalo Guerrero)
+                  </span>
                 </td>
-                <td rowspan="3">Conferencista nacional</td>
+                <td rowspan="2">
+                  Conferencista nacional: <br />
+                  <span class="comentario">
+                    ¿Los datos me hablan o mis ideas los inventan?: estudio de
+                    los múltiples PCK que se ponen en juego al enseñar cambio
+                    climático (Hernán Cofré)
+                  </span>
+                </td>
+                <td rowspan="2">
+                  Conferencista nacional: <br />
+                  <span class="comentario">
+                    Aprender Ciencias y Ciudadanía con el enfoque territorial
+                    (Valeria Cabello)
+                  </span>
+                </td>
               </tr>
 
               <tr>
                 <td class="time">17:00 - 17:30</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">17:30 - 18:00</td>
-                <td rowspan="3">Pósters</td>
+                <td rowspan="3">Exposición de posters</td>
+                <td rowspan="3">Simposios</td>
+                <td rowspan="3">Cierre Congreso despedida</td>
               </tr>
 
               <tr>
                 <td class="time">18:00 - 18:30</td>
 
-                <td rowspan="2">Cierre Congreso despedida</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">18:30 - 19:00</td>
 
-                <td rowspan="2">Asamblea de socias y socios</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
+                <!-- <td>Viernes</td> -->
               </tr>
 
               <tr>
                 <td class="time">19:00 - 19:30</td>
                 <td rowspan="2">Bienvenida</td>
-
+                <td rowspan="2">Asamblea de socias y socios</td>
                 <td>&nbsp;</td>
               </tr>
 
               <tr>
                 <td class="time">19:30 - 20:00</td>
 
-                <td rowspan="2"></td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
                 <td rowspan="2">Cena</td>
               </tr>
 
               <tr>
                 <td class="time">20:00 - 21:00</td>
-                <td>&nbsp;</td>
+                <!-- <td>Miércoles</td> -->
+                <!-- <td>Jueves</td> -->
               </tr>
             </tbody>
           </table>
@@ -461,6 +509,116 @@
         </div>
         <a class="prev">&#10094;</a>
         <a class="next">&#10095;</a>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+
+      <section id="talleres">
+        <div class="talleres-header">
+          <h2>Talleres</h2>
+        </div>
+        <div class="taller-slideShow">
+          <div class="taller-carrusel">
+            <div class="taller-superior">
+              <div class="taller-titulo">
+                <div class="taller-institucion">
+                  Enseñar Ciencias de la Tierra desde la experiencia: como
+                  incluir los 3 niveles de Alfabetización Científica en el aula.
+                </div>
+                <div class="taller-personas">
+                  Hernán Cofré Mardones, Paola Núñez Nieto y Kasandra Navarrete
+                  López
+                </div>
+              </div>
+            </div>
+
+            <div class="taller-nombre">
+              Grupo de investigación en Enseñanza de la Biología y Ciencias de
+              la Tierra, Bioeducanos
+            </div>
+          </div>
+
+          <div class="taller-carrusel">
+            <div class="taller-superior">
+              <div class="taller-titulo">
+                <div class="taller-institucion">
+                  Repensar la educación científica: desafíos y oportunidades al
+                  incorporar la perspectiva de género en la enseñanza
+                </div>
+                <div class="taller-personas">
+                  Pamela Palomera Rojas, Geraldine Baquero Mendieta, Cristhy
+                  González Salazar y Carmen Alfaro Contreras.
+                </div>
+              </div>
+            </div>
+
+            <div class="taller-nombre">
+              Grupo de investigación género, educación científica y diversidad
+            </div>
+          </div>
+
+          <div class="taller-carrusel">
+            <div class="taller-superior">
+              <div class="taller-titulo">
+                <div class="taller-institucion">
+                  Explora en Movimiento como Herramienta Pedagógica para la
+                  Enseñanza de las Matemáticas
+                </div>
+                <div class="taller-personas">
+                  Dra. Monica Navarrete Álvarez, Dr. Vagner de Sousa Beserra y
+                  Nicolás Montero.
+                </div>
+              </div>
+            </div>
+
+            <div class="taller-nombre">
+              Facultad de Administración y Economía de la Universidad de
+              Tarapacá Proyecto Asociativo Regional Explora Arica y Parinacota
+            </div>
+          </div>
+
+          <div class="taller-carrusel">
+            <div class="taller-superior">
+              <div class="taller-titulo">
+                <div class="taller-institucion">
+                  Ciencia con Sentido: explorar, sentir y aprender en espacios
+                  abiertos
+                </div>
+                <div class="taller-personas"></div>
+              </div>
+            </div>
+
+            <div class="taller-nombre">
+              Profesionales de la Subdirección de Apoyo Técnico Pedagógico del
+              SLEP Barrancas
+            </div>
+          </div>
+
+          <div class="taller-carrusel">
+            <div class="taller-superior">
+              <div class="taller-titulo">
+                <div class="taller-institucion">
+                  Comunidades de Aprendizaje: reflexionando colaborativamente
+                  para transformar la propia práctica (y con ello…la educación
+                  en ciencias)
+                </div>
+                <div class="taller-personas"></div>
+              </div>
+            </div>
+
+            <div class="taller-nombre">
+              PRETeC Profesores Reflexionando por una Educación Transformadora
+              en Ciencias
+            </div>
+          </div>
+
+          <div class="spacer-final"></div>
+        </div>
+        <a class="taller-prev">&#10094;</a>
+        <a class="taller-next">&#10095;</a>
         <div style="text-align: center">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
@@ -858,5 +1016,6 @@
     <script src="expositores.js"></script>
     <script src="sobrearica.js"></script>
     <script src="programa.js"></script>
+    <script src="talleres.js"></script>
   </body>
 </html>

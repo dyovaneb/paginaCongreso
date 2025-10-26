@@ -36,7 +36,46 @@ function scrollToExpositorByIndex(index) {
   slideShow.scrollTo({ left: scrollPosition, behavior: 'smooth' });
 }
 
+function updateSlideShowNavButtons() {
+  const slideShow = document.querySelector('.slideShow');
+  if (!slideShow) return;
+  const items = Array.from(slideShow.querySelectorAll('.expositorcarrusel'));
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  if (!items.length || !prevBtn || !nextBtn) return;
+
+  const scrollLeft = slideShow.scrollLeft;
+  let closestIndex = 0;
+  let minDist = Infinity;
+
+  items.forEach((el, i) => {
+    const dist = Math.abs(el.offsetLeft - scrollLeft);
+    if (dist < minDist) {
+      minDist = dist;
+      closestIndex = i;
+    }
+  });
+
+  // ocultar/mostrar
+  prevBtn.style.display = (closestIndex <= 0) ? 'none' : '';
+  nextBtn.style.display = (closestIndex >= items.length - 1) ? 'none' : '';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  updateSlideShowNavButtons();
+
+  const slideShow = document.querySelector('.slideShow');
+  if (!slideShow) return;
+
+  let rafId = null;
+  slideShow.addEventListener('scroll', () => {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      updateSlideShowNavButtons();
+      rafId = null;
+    });
+  });
+
   const prevBtn = document.querySelector('.prev');
   const nextBtn = document.querySelector('.next');
   if (prevBtn) prevBtn.addEventListener('click', () => scrollToExpositor(-1));
@@ -46,5 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
   headerItems.forEach((item, idx) => {
     item.addEventListener('click', () => scrollToExpositorByIndex(idx + 1));
   });
+  window.addEventListener('resize', updateSlideShowNavButtons);
 });
 

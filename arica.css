@@ -130,7 +130,6 @@ section#sobre {
     gap: 1rem;
   }
   .hotelprev, .hotelnext {
-  top: 18%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -180,4 +179,6 @@ section#sobre {
     min-width: 0;
     height: 1px;
   }
+
+  
 }
