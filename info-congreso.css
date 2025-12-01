@@ -13,6 +13,7 @@
   max-width: 50%;
   box-sizing: border-box;
   padding: 2rem;
+  padding-top: 0rem;
   text-align: center;
   font-size: clamp(1rem, 1.3vw, 2rem);
 }
@@ -51,6 +52,31 @@
   background: #000;
 }
 
+.buttonInfo {
+  background-color: #ffde59;
+  border-radius: 50px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+  margin: 1vh;
+  width: 15vw;
+}
+
+.buttonInfo:hover {
+    background-color: #afafaf; /* Elige el color que prefieras */
+    color: #000; /* Opcional: cambia el color del texto si lo necesitas */
+}
+
 @media (max-width: 900px) {
   .info-congreso > div {
   padding: 0rem;
@@ -69,4 +95,8 @@
   height: auto;
   margin-top: 2vh;
 }
+.buttonInfo {
+    font-size: clamp(0.7rem, 2vw, 2rem);
+    margin: 5vh auto;
+  }
 }
